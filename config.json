@@ -29,19 +29,19 @@
     	"applicationExtensionKey": "static-split",
         "defaults": { "controlsize": "10"},
         "save": {
-        	"url": "https://amcleod72.github.io/routes/save",
+        	"url": "https://amcleod72.github.io/routes/save.json",
             "body": "",
             "verb": "POST",
             "useJwt": false
         },
         "publish": {
-        	"url": "https://amcleod72.github.io/routes/publish",
+        	"url": "https://amcleod72.github.io/routes/publish.json",
             "verb": "POST",
             "body": "",
             "useJwt": false
         },
         "validate": {
-        	"url": "https://amcleod72.github.io/routes/validate",
+        	"url": "https://amcleod72.github.io/routes/validate.json",
             "verb": "POST",
             "body": "",
             "useJwt": false
