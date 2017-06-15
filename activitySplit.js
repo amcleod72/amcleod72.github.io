@@ -1,6 +1,5 @@
 <script runat="server" language="JavaScript">
 	Platform.Load("core","1");
 
-	var obj = {"branchResult":"control"};
-    Write(Stringify(obj));
+	Platform.Response.Redirect("https://amcleod72.github.io/routes/controlpath.json");
 </script>
