@@ -1,0 +1,73 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+        "version": "1.0",
+        "icon": "images/Kalido.jpg",
+        "iconSmall": "images/Kalido.jpg"
+    },
+    "type": "RESTDECISION",
+    "lang": {
+        "en-US": {
+            "name": "Assign Control",
+            "description": "Assign Contacts to a Control Group"
+        }
+    },
+    "arguments": {
+        "execute": {
+			"inArguments":[],
+            "outArguments": [],
+			"url": "https://kalido-utils.herokuapp.com/ixn/activities/split/execute/",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+    	"applicationExtensionKey": "control-split",
+        "defaults": { "controlsize": "10"},
+        "save": {
+        	"url": "https://kalido-utils.herokuapp.com/ixn/activities/split/save/",
+            "body": "",
+            "verb": "POST",
+            "useJwt": false
+        },
+        "publish": {
+        	"url": "https://kalido-utils.herokuapp.com/ixn/activities/split/publish/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        },
+        "validate": {
+        	"url": "https://kalido-utils.herokuapp.com/ixn/activities/split/validate/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        }
+    },
+    "edit": {
+    	"url": "https://kalido-utils.herokuapp.com/ixn/activities/split/",
+        "height": 400,
+        "width": 500
+    },
+    "outcomes": [
+        {
+            "arguments": {
+                "branchResult": "target"
+            },
+            "metaData": {
+                "label": "Target"
+            }
+        },
+        {
+            "arguments": {
+                "branchResult": "control"
+            },
+            "metaData": {
+                "label": "Control"
+            }
+        }
+    ]
+}

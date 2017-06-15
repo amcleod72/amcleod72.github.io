@@ -1,0 +1,27 @@
+requirejs.config({
+    paths: {
+        vendor: '../vendor',
+		postmonger: 'vendor/postmonger'
+    },
+    shim: {
+        'vendor/jquery.min': {
+            exports: '$'
+        },
+		'Control': {
+			deps: ['vendor/jquery.min', 'vendor/postmonger']
+		}
+    }
+});
+
+requirejs( ['vendor/jquery.min', 'Control'], function( $, CreateCase ) {
+	console.log( 'REQUIRE LOADED' );
+});
+
+requirejs.onError = function( err ) {
+	console.log( "REQUIRE ERROR: ", err );
+	if( err.requireType === 'timeout' ) {
+		console.log( 'modules: ' + err.requireModules );
+	}
+
+	throw err;
+};

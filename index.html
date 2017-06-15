@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Control Group Assignment</title>
+	<script data-main="js/main.js" src="js/require.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+</head>
+<body class="fuelux">
+    <div class="container">
+	<div id="step1" class="step">
+	<p><small id="version"></small></p>
+	<p/>
+	<h1>Configure Control Group</h1>
+	<p>Please select the percentage of customers who you would like added to the Control Group</p>
+	<p/>
+		Control Size:
+		<select id="selectSize">
+			<option value="">Select an option</option>
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="35">35</option>
+			<option value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option>
+		</select>
+	</div>
+	<div id="step2" class="step">
+		<p>Please review your settings.</p>
+		<p/>
+		Control Size: <div id="showSize"></div>
+	</div>
+</div>
+</body>
+</html>
