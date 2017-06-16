@@ -90,9 +90,9 @@ define( function( require ) {
 
         console.log("Round Slider Rendering");
         $("#slider").roundSlider({
-            radius: 100,
-            width: 45,
-            handleSize: "+14",
+            radius: 90,
+            width: 40,
+            handleSize: "+12",
             handleShape: "round",
             sliderType: "min-range",
             value: 0,
