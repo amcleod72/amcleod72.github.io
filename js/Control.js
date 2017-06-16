@@ -3,8 +3,8 @@ define( function( require ) {
     'use strict';
 
 	var Postmonger = require( 'postmonger' );
-	var $ = require( 'vendor/jquery.min' );
-    var Slider = require( 'roundslider.min' );
+	var $ = require( 'jquery' );
+    var Slider = require( 'roundslider' );
 
     var connection = new Postmonger.Session();
     var toJbPayload = {};

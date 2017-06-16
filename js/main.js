@@ -1,21 +1,21 @@
-requirejs.config({
-    paths: {
+require.config({
+   paths: {
         vendor: '../vendor',
-		postmonger: 'vendor/postmonger',
-        roundslider: 'js/roundslider.min.js'
+        jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min',
+        postmonger: 'postmonger.min',
+        roundslider: 'roundslider.min',
+        control: 'Control'
     },
+
+    // Use shim for plugins that does not support ADM
     shim: {
-        'vendor/jquery.min': {
-            exports: '$'
-        },
-		'Control': {
-			deps: ['vendor/jquery.min', 'vendor/postmonger', 'roundslider.min']
-		},
-        "roundslider":  ["vendor/jquery.min"]
+        'postmonger': ['jquery'],
+        'roundslider': ['jquery','postmonger'],
+        'control': ['jquery','roundslider']
     }
 });
 
-requirejs( ['vendor/jquery.min', 'Control'], function( $, CreateCase ) {
+requirejs( ['jquery', 'control'], function( $, CreateCase ) {
 	console.log( 'REQUIRE LOADED' );
 });
 
