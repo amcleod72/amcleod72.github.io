@@ -121,7 +121,7 @@ define( function( require ) {
         //toJbPayload.name = "my activity";
 
 		//this will be sent into the custom activity body within the inArguments array.
-        toJbPayload['arguments'].execute.inArguments.push({"size": value});
+        toJbPayload['arguments'].execute.inArguments = [{"size": value}];
 
 		/*
         toJbPayload['metaData'].things = 'stuff';
