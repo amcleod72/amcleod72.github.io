@@ -90,13 +90,23 @@ define( function( require ) {
 
         console.log("Round Slider Rendering");
         $("#slider").roundSlider({
-            radius: 80,
-            width: 14,
-            handleSize: "+8",
-            handleShape: "dot",
+            radius: 120,
+            width: 50,
+            handleSize: "+14",
+            handleShape: "round",
             sliderType: "min-range",
-            value: 19
+            value: 0,
+            tooltipFormat: "changeTooltip",
+            startAngle: 90,
+            change: function (args) {
+                connection.trigger('updateButton', { button: 'next', enabled: Boolean(size) });
+                }
         });
+    };
+
+    function changeTooltip(e) {
+        var val = e.value;
+        return val + " %"
     };
 
     function gotoStep(step) {
@@ -120,7 +130,8 @@ define( function( require ) {
     };
 
     function getSize() {
-        return $('#selectSize').find('option:selected').attr('value').trim();
+        return$("span .rs-tooltip .rs-tooltip-text").text();
+        //return $('#selectSize').find('option:selected').attr('value').trim();
     };
 
     function save() {

@@ -4,39 +4,54 @@
     <meta charset="utf-8">
     <title>Control Group Assignment</title>
 	<script data-main="js/main.js" src="js/require.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+    <link href="lightning/styles/salesforce-lightning-design-system.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet">
 </head>
-<body class="fuelux">
-    <div class="container">
-        <div id="step1" class="step">
-            <p><small id="version"></small></p>
-            <p/>
-            <h1>Configure Control Group</h1>
-            <p>Please select the percentage of customers who you would like added to the Control Group</p>
-            <p/> Control Size:
-            <select id="selectSize">
-			<option value="">Select an option</option>
-			<option value="5">5</option>
-			<option value="10">10</option>
-			<option value="15">15</option>
-			<option value="20">20</option>
-			<option value="25">25</option>
-			<option value="30">30</option>
-			<option value="35">35</option>
-			<option value="40">40</option>
-			<option value="45">45</option>
-			<option value="50">50</option>
-		</select>
-
-            <div id="slider" class="rslider" style="height: 160px; width: 160px;">
+<body>
+    <div class="slds-grid slds-grid_align-center">
+        <div class="slds-col">
+            <div class="slds-grid">
+            <div class="slds-media slds-col" style="padding-bottom: 40px;">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-custom-custom101">
+                        <svg class="slds-icon slds-icon--large" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./lightning/icons/standard-sprite/svg/symbols.svg#environment_hub"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-truncate slds-align-middle" title="Kalido Settings">Kalido for Journey Builder</h2>
+                    <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Kalido Settings">Control Group Size</h1>
+                </div>
             </div>
-        </div>
-        <div id="step2" class="step">
-            <p>Please review your settings.</p>
-            <p/> Control Size:
-            <div id="showSize"></div>
+            </div>
+            <div id="step1" class="step slds-size_1-of-1" style="padding-left: 15px; padding-right: 15px;">
+                <p hidden><small id="version"></small></p>
+
+                <div class="slds-text-heading_medium">Please select the percentage of customers who you would like added to the Control Group</div>
+
+                <select id="selectSize" hidden>
+    			<option value="">Select an option</option>
+    			<option value="5">5</option>
+    			<option value="10">10</option>
+    			<option value="15">15</option>
+    			<option value="20">20</option>
+    			<option value="25">25</option>
+    			<option value="30">30</option>
+    			<option value="35">35</option>
+    			<option value="40">40</option>
+    			<option value="45">45</option>
+    			<option value="50">50</option>
+    		</select>
+
+                <div id="slider" class="rslider" style="padding-top:40px; height: 160px; width: 160px; width: 50%; margin: 0 auto;">
+                </div>
+            </div>
+            <div id="step2" class="step slds-size_1-of-1">
+                <p>Please review your settings.</p>
+                <p/> Control Size:
+                <div id="showSize"></div>
+            </div>
         </div>
     </div>
 </body>
