@@ -90,8 +90,8 @@ define( function( require ) {
 
         console.log("Round Slider Rendering");
         $("#slider").roundSlider({
-            radius: 105,
-            width: 20,
+            radius: 80,
+            width: 14,
             handleSize: "+8",
             handleShape: "dot",
             sliderType: "min-range",
@@ -121,10 +121,6 @@ define( function( require ) {
 
     function getSize() {
         return $('#selectSize').find('option:selected').attr('value').trim();
-    };
-
-    function changeLabel(e) {
-        return e.value + "%";
     };
 
     function save() {
