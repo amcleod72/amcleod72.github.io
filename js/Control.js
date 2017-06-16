@@ -99,14 +99,10 @@ define( function( require ) {
             tooltipFormat: "changeTooltip",
             startAngle: 90,
             change: function (args) {
+                var size = getSize();
                 connection.trigger('updateButton', { button: 'next', enabled: Boolean(size) });
                 }
         });
-    };
-
-    function changeTooltip(e) {
-        var val = e.value;
-        return val + " %"
     };
 
     function gotoStep(step) {
