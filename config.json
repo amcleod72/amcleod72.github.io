@@ -2,8 +2,8 @@
     "workflowApiVersion": "1.0",
     "metaData": {
         "version": "1.0",
-        "icon": "images/icon-choose-object.svg",
-        "iconSmall": "images/icon-choose-object.svg"
+        "icon": "images/pie.png",
+        "iconSmall": "images/pie.png"
     },
     "type": "RESTDECISION",
     "lang": {
