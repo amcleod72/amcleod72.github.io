@@ -44,6 +44,15 @@ define( function( require ) {
 		$('#selectSize').find('option[value='+ size +']').attr('selected', 'selected');
 		gotoStep(step);
 
+        $("#slider").roundSlider({
+            radius: 80,
+            width: 14,
+            handleSize: "+8",
+            handleShape: "dot",
+            sliderType: "min-range",
+            value: 19
+        });
+
     });
 
     connection.on('requestedTokens', function(data) {
