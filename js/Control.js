@@ -116,20 +116,8 @@ define( function( require ) {
 
         var value = getSize();
 
-        // toJbPayload is initialized on populateFields above.  Journey Builder sends an initial payload with defaults
-        // set by this activity's config.json file.  Any property may be overridden as desired.
-        //toJbPayload.name = "my activity";
-
 		//this will be sent into the custom activity body within the inArguments array.
         toJbPayload['arguments'].execute.inArguments = [{"size": value}];
-
-		/*
-        toJbPayload['metaData'].things = 'stuff';
-        toJbPayload['metaData'].icon = 'path/to/icon/set/from/iframe/icon.png';
-        toJbPayload['configurationArguments'].version = '1.1'; // optional - for 3rd party to track their customActivity.js version
-        toJbPayload['configurationArguments'].partnerActivityId = '49198498';
-        toJbPayload['configurationArguments'].myConfiguration = 'configuration coming from iframe';
-		*/
 
 		toJbPayload.metaData.isConfigured = true;  //this is required by JB to set the activity as Configured.
         connection.trigger('updateActivity', toJbPayload);

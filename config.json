@@ -2,8 +2,8 @@
     "workflowApiVersion": "1.0",
     "metaData": {
         "version": "1.0",
-        "icon": "images/Kalido.jpg",
-        "iconSmall": "images/Kalido.jpg"
+        "icon": "images/icon-choose-object.svg",
+        "iconSmall": "images/icon-choose-object.svg"
     },
     "type": "RESTDECISION",
     "lang": {
