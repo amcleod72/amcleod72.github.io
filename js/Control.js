@@ -86,15 +86,6 @@ define( function( require ) {
             var size = getSize();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(size) });
         });
-
-        $("#appearance2").roundSlider({
-            radius: 80,
-            width: 14,
-            handleSize: "+8",
-            handleShape: "dot",
-            sliderType: "min-range",
-            value: 19
-        });
     };
 
     function gotoStep(step) {
