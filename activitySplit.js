@@ -1,12 +1,49 @@
 <script runat="server" language="JavaScript">
 	Platform.Load("core","1");
 
-	// Create a random number to emulate decisioning
-    var rand = Math.floor(Math.random() * 5);
+	// Data Extension used for logging - use External keyValue
+	var DE = DataExtension.Init("ControlGroupLog");
+	var confirmation;
 
-    if (rand == 1){
-        Platform.Response.Redirect("https://amcleod72.github.io/routes/controlpath.json");
+	// Get the payload posted to this page
+	var obj = Platform.Function.ParseJSON(Platform.Request.GetPostData("UTF-8"));
+
+	// Size is the percentage of contacts that should be placed in the control group
+	var size = obj.inArguments[0].size;
+
+	var row =	[{
+		ContactKey:				obj.keyValue,
+		JourneyID:				obj.journeyId,
+		ActivityId:				obj.activityId,
+		ActivityObjectID:		obj.activityObjectID,
+		DefinitionInstanceId:	obj.definitionInstanceId,
+		ActivityInstanceId:		obj.activityInstanceId
+	}];
+
+	var outcome = getPath(size);
+
+    if (outcome == "control"){
+		row[0].IsControl = 1;
+		confirmation = "https://amcleod72.github.io/routes/controlpath.json"
     } else {
-        Platform.Response.Redirect("https://amcleod72.github.io/routes/targetpath.json");
+		row[0].IsControl = 0;
+		confirmation = "https://amcleod72.github.io/routes/targetpath.json"
     }
+
+	DE.Rows.Add(row);
+	Platform.Response.Redirect(confirmation);
+
+
+	function getPath (controlSize) {
+		// generate a random integer between 1 and
+		var max = 100/controlSize;
+		var randVal = Math.floor(Math.random() * max) + 1;
+
+		if (randVal == 1){
+			return "control";
+		} else {
+			//return "target";
+			return "target";
+		}
+	}
 </script>

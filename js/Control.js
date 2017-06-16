@@ -32,7 +32,7 @@ define( function( require ) {
 			size = oArgs.size || toJbPayload['configurationArguments'].defaults.size;
         }
 
-		$.get( "/version", function( data ) {
+		$.get( "/routes/version.json", function( data ) {
 			$('#version').html('Version: ' + data.version);
 		});
 
