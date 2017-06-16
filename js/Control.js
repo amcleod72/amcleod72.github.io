@@ -95,7 +95,7 @@ define( function( require ) {
             handleSize: "+8",
             handleShape: "dot",
             sliderType: "min-range",
-            value: 0
+            value: 19
         });
     };
 
