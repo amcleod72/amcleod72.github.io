@@ -9,14 +9,13 @@
 </head>
 <body class="fuelux">
     <div class="container">
-	<div id="step1" class="step">
-	<p><small id="version"></small></p>
-	<p/>
-	<h1>Configure Control Group</h1>
-	<p>Please select the percentage of customers who you would like added to the Control Group</p>
-	<p/>
-		Control Size:
-		<select id="selectSize">
+        <div id="step1" class="step">
+            <p><small id="version"></small></p>
+            <p/>
+            <h1>Configure Control Group</h1>
+            <p>Please select the percentage of customers who you would like added to the Control Group</p>
+            <p/> Control Size:
+            <select id="selectSize">
 			<option value="">Select an option</option>
 			<option value="5">5</option>
 			<option value="10">10</option>
@@ -29,12 +28,29 @@
 			<option value="45">45</option>
 			<option value="50">50</option>
 		</select>
-	</div>
-	<div id="step2" class="step">
-		<p>Please review your settings.</p>
-		<p/>
-		Control Size: <div id="showSize"></div>
-	</div>
-</div>
+
+            <div id="slider" class="rslider" style="height: 160px; width: 160px;">
+            </div>
+        </div>
+        <div id="step2" class="step">
+            <p>Please review your settings.</p>
+            <p/> Control Size:
+            <div id="showSize"></div>
+        </div>
+    </div>
+
+    <script>
+        $('document').ready(function() {
+            $("#slider").roundSlider({
+                radius: 80,
+                width: 14,
+                handleSize: "+8",
+                handleShape: "dot",
+                sliderType: "min-range",
+                value: 19
+            });
+        }); //Document Ready
+    </script>
 </body>
+
 </html>
