@@ -44,15 +44,6 @@ define( function( require ) {
 		$('#selectSize').find('option[value='+ size +']').attr('selected', 'selected');
 		gotoStep(step);
 
-        $("#slider").roundSlider({
-            radius: 80,
-            width: 14,
-            handleSize: "+8",
-            handleShape: "dot",
-            sliderType: "min-range",
-            value: 19
-        });
-
     });
 
     connection.on('requestedTokens', function(data) {
@@ -94,6 +85,16 @@ define( function( require ) {
         $('#selectSize').change(function() {
             var size = getSize();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(size) });
+        });
+
+        console.log("Round Slider Rendering");
+        $("#slider").roundSlider({
+            radius: 80,
+            width: 14,
+            handleSize: "+8",
+            handleShape: "dot",
+            sliderType: "min-range",
+            value: 19
         });
     };
 
