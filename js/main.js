@@ -1,7 +1,8 @@
 requirejs.config({
     paths: {
         vendor: '../vendor',
-		postmonger: 'vendor/postmonger'
+		postmonger: 'vendor/postmonger',
+        roundslider: 'js/roundslider.min.js'
     },
     shim: {
         'vendor/jquery.min': {
