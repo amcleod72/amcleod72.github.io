@@ -88,9 +88,10 @@ define( function( require ) {
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(size) });
         });
 
+        console.log("Round Slider Rendering");
         $("#slider").roundSlider({
-            radius: 105,
-            width: 20,
+            radius: 80,
+            width: 14,
             handleSize: "+8",
             handleShape: "dot",
             sliderType: "min-range",
