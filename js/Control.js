@@ -33,10 +33,6 @@ define( function( require ) {
 			size = oArgs.size || toJbPayload['configurationArguments'].defaults.size;
         }
 
-		$.get( "/routes/version.json", function( data ) {
-			$('#version').html('Version: ' + data.version);
-		});
-
         // If there is no size selected, disable the next button
         if (!size) {
             connection.trigger('updateButton', { button: 'next', enabled: false });
