@@ -38,6 +38,8 @@ define( function( require ) {
             connection.trigger('updateButton', { button: 'next', enabled: false });
         }
 
+        $("#slider").roundSlider.setValue(size);
+
 		$('#selectSize').find('option[value='+ size +']').attr('selected', 'selected');
 		gotoStep(step);
 
