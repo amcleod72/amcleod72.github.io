@@ -95,8 +95,7 @@ define( function( require ) {
             handleSize: "+8",
             handleShape: "dot",
             sliderType: "min-range",
-            value: 0,
-            tooltipFormat: "changeLabel"
+            value: 0
         });
     };
 
