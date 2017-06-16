@@ -99,7 +99,8 @@ define( function( require ) {
             tooltipFormat: "changeTooltip",
             startAngle: 90,
             change: function (args) {
-                var size = getSize();
+                console.log("size updated");
+                var size = args.value;
                 connection.trigger('updateButton', { button: 'next', enabled: Boolean(size) });
                 }
         });
