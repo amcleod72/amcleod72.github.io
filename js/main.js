@@ -9,7 +9,7 @@ requirejs.config({
             exports: '$'
         },
 		'Control': {
-			deps: ['vendor/jquery.min', 'vendor/postmonger', 'js/roundslider.min']
+			deps: ['vendor/jquery.min', 'vendor/postmonger', 'roundslider.min']
 		}
     }
 });
