@@ -125,7 +125,7 @@ define( function( require ) {
 
     function changeLabel(e) {
         return e.value + "%";
-    }
+    };
 
     function save() {
 
