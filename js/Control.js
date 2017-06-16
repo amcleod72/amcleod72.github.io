@@ -127,7 +127,9 @@ define( function( require ) {
     };
 
     function getSize() {
-        return $(".rs-tooltip-text").text();
+        var size = $(".rs-tooltip-text").text();
+        console.log("getSize: " + size);
+        return size;
         //return $('#selectSize').find('option:selected').attr('value').trim();
     };
 
