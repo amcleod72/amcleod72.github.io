@@ -38,7 +38,7 @@ define( function( require ) {
             connection.trigger('updateButton', { button: 'next', enabled: false });
         }
 
-        $("#slider").roundSlider.setValue(size);
+        $("#slider").roundSlider("option", "value", size);
 
 		$('#selectSize').find('option[value='+ size +']').attr('selected', 'selected');
 		gotoStep(step);
