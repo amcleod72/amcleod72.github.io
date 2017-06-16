@@ -8,7 +8,7 @@
     "type": "RESTDECISION",
     "lang": {
         "en-US": {
-            "name": "Static Split",
+            "name": "Control Group Split",
             "description": "Assign Contacts to a Control Group"
         }
     },
