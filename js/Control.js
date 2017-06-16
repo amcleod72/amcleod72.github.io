@@ -4,7 +4,7 @@ define( function( require ) {
 
 	var Postmonger = require( 'postmonger' );
 	var $ = require( 'vendor/jquery.min' );
-    var Slider = require( 'js/roundslider.min' );
+    var Slider = require( 'roundslider.min' );
 
     var connection = new Postmonger.Session();
     var toJbPayload = {};
