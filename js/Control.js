@@ -130,7 +130,7 @@ define( function( require ) {
     };
 
     function getSize() {
-        return$("span .rs-tooltip .rs-tooltip-text").text();
+        return $("span .rs-tooltip .rs-tooltip-text").text();
         //return $('#selectSize').find('option:selected').attr('value').trim();
     };
 
