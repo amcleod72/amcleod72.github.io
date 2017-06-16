@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Control Group Assignment</title>
-	<script data-main="js/main.js" src="js/require.js"></script>
+    <script data-main="js/main.js" src="js/require.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body class="fuelux">
     <div class="container">
-	<div id="step1" class="step">
-	<p><small id="version"></small></p>
-	<p/>
-	<h1>Configure Control Group</h1>
-	<p>Please select the percentage of customers who you would like added to the Control Group</p>
-	<p/>
-		Control Size:
-		<select id="selectSize">
+        <div id="step1" class="step">
+            <p><small id="version"></small></p>
+            <p/>
+            <h1>Configure Control Group</h1>
+            <p>Please select the percentage of customers who you would like added to the Control Group</p>
+            <p/> Control Size:
+            <select id="selectSize">
 			<option value="">Select an option</option>
 			<option value="5">5</option>
 			<option value="10">10</option>
@@ -29,12 +31,28 @@
 			<option value="45">45</option>
 			<option value="50">50</option>
 		</select>
-	</div>
-	<div id="step2" class="step">
-		<p>Please review your settings.</p>
-		<p/>
-		Control Size: <div id="showSize"></div>
-	</div>
-</div>
+
+            <div class="rs-container full" style="height: 160px; width: 160px;">
+                <div class="rs-inner-container">
+                    <div class="rs-block rs-outer rs-border rs-split">
+                        <div class="rs-path rs-transition rs-range-color" style="transform: rotate(0deg);"></div>
+                        <div class="rs-path rs-transition rs-range-color" style="opacity: 0; transform: rotate(-111.6deg);"></div>
+                        <div class="rs-path rs-transition rs-path-color" style="transform: rotate(68.4deg); opacity: 1;"></div>
+                        <div class="rs-path rs-transition rs-path-color" style="opacity: 1; z-index: 1; transform: rotate(-180deg);"></div><span class="rs-block" style="padding: 14px;"><div class="rs-inner rs-bg-color rs-border"></div></span></div>
+                </div>
+                <div class="rs-bar rs-transition rs-first" style="z-index: 5; transform: rotate(68.4deg);">
+                    <div class="rs-handle rs-handle-dot rs-move" index="2" tabindex="0" role="slider" aria-label="appearance2_handle" style="height: 22px; width: 22px; margin: -11px 0px 0px -3px;" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><span class="rs-bar rs-transition rs-start" style="transform: rotate(0deg);"><span class="rs-seperator" style="width: 14px; margin-left: 1px;"></span></span><span class="rs-bar rs-transition rs-end" style="transform: rotate(360deg);"><span class="rs-seperator" style="width: 14px; margin-left: 1px;"></span></span>
+                <span
+                    class="rs-tooltip rs-tooltip-text edit" style="margin-top: -14px; margin-left: -17.5px;">19</span>
+            </div>
+        </div>
+        <div id="step2" class="step">
+            <p>Please review your settings.</p>
+            <p/> Control Size:
+            <div id="showSize"></div>
+        </div>
+    </div>
 </body>
+
 </html>
