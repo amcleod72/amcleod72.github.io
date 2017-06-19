@@ -13,7 +13,7 @@
 
 	var row =	[{
 		ContactKey:				obj.keyValue,
-		JourneyID:				obj.journeyId,
+		JourneyVersionID:		obj.journeyId,
 		ActivityId:				obj.activityId,
 		ActivityObjectID:		obj.activityObjectID,
 		DefinitionInstanceId:	obj.definitionInstanceId,
