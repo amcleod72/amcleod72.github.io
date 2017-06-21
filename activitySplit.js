@@ -35,15 +35,21 @@
 
 
 	function getPath (controlSize) {
-		// generate a random integer between 1 and
-		var max = 100/controlSize;
-		var randVal = Math.floor(Math.random() * max) + 1;
-
-		if (randVal == 1){
-			return "control";
-		} else {
+		// Avoid divide by zero issues where control is zero per cent
+		if (controlSize == 0){
 			//return "target";
 			return "target";
+		} else {
+			// generate a random integer between 1 and
+			var max = 100/controlSize;
+			var randVal = Math.floor(Math.random() * max) + 1;
+
+			if (randVal == 1){
+				return "control";
+			} else {
+				//return "target";
+				return "target";
+			}
 		}
 	}
 </script>
