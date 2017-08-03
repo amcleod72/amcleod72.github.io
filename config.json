@@ -16,7 +16,7 @@
         "execute": {
 			"inArguments":[],
             "outArguments": [],
-			"url": "https://amcleod72.github.io/routes/targetpath.json",
+			"url": "https://pub.s7.exacttarget.com/vte5ou1alk5",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -29,19 +29,19 @@
     	"applicationExtensionKey": "static-split",
         "defaults": { "controlsize": "10"},
         "save": {
-        	"url": "https://pub.s1.exacttarget.com/gtxuelvqzap",
+        	"url": "https://pub.s7.exacttarget.com/glmicb02qi4",
             "body": "",
             "verb": "POST",
             "useJwt": false
         },
         "publish": {
-        	"url": "https://pub.s1.exacttarget.com/yodjg5qxlye",
+        	"url": "https://pub.s7.exacttarget.com/fmalrzva3zp",
             "verb": "POST",
             "body": "",
             "useJwt": false
         },
         "validate": {
-        	"url": "https://pub.s1.exacttarget.com/1xhrusexyci",
+        	"url": "https://pub.s7.exacttarget.com/htfgmmeum3n",
             "verb": "POST",
             "body": "",
             "useJwt": false
